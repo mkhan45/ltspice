@@ -1,7 +1,7 @@
 * C:\ltspice\circuit.asc
-V1 +V 0 12V Rser=0
-V2 0 -V 12V Rser=0
-V3 Vi 0 SINE(0 .015 100)
+V1 +V 0 12V Rser=1
+V2 0 -V 12V Rser=1
+V3 Vi 0 SINE(0 .015 20000)
 R1 V1st N002 62K pwr=5
 R2 N002 0 6.2K tol=5
 R3 N004 V1st 8.2K tol=5
@@ -17,22 +17,26 @@ Q1 +V N001 N005 0 Qmje15034
 Q2 -V N001 N007 0 Qmje15035
 D1 N005 Vpoweramp D
 D2 Vpoweramp N007 D
-XU5 0 N006 +V -V N001 ADA4700-1
-XU6 0 N003 +V -V V3rd ADA4700-1
-XU7 0 N004 +V -V V2nd ADA4700-1
-XU8 Vi N002 +V -V V1st ADA4700-1
+C2 +V 0 1000nF V=10 Irms=0 Rser=4 Lser=0
+C5 +V 0 5000nF
+C3 0 -V 1000nF V=10 Irms=0 Rser=4 Lser=0
+C4 0 -V 5000nF
+XU6 Vi N002 +V -V V1st level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+XU7 0 N004 +V -V V2nd level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+XU8 0 N003 +V -V V3rd level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+XU5 0 N006 +V -V N001 LF411/MC
 .model D D
 .lib C:\Users\fishi\Documents\LTspiceXVII\lib\cmp\standard.dio
 .model NPN NPN
 .model PNP PNP
 .lib C:\Users\fishi\Documents\LTspiceXVII\lib\cmp\standard.bjt
-.tran .1
+.tran .0005
 * Preamp
 * Filters
 * Poweramp
 .inc MJE15034.LIB
 .inc MJE15035.LIB
-.inc LF411C.LIB
-.lib ADI1.lib
+.inc LF411.LIB
+.lib UniversalOpamps2.sub
 .backanno
 .end
