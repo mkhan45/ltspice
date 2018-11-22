@@ -1,8 +1,8 @@
 * E:\ltspice\circuit.asc
-V1 +V 0 15V Rser=25
-V2 0 -V 15V Rser=25
-V3 Vi 0 SINE(0 .075 20000)
-R3 N005 V1st 10K tol=5
+V1 +V 0 16V Rser=25
+V2 0 -V 16V Rser=25
+V3 Vi 0 SINE(0 .07 20000)
+R3 N005 V1st 9K tol=5
 R4 V2nd N005 56K tol=5
 R5 V3rd N003 56K tol=5
 R6 N003 V2nd 10K tol=5
@@ -10,9 +10,9 @@ C1 V1C V3rd 820nF
 R7 V1C 0 10k
 R11 N007 V1C 10K
 R12 N006 N007 10K
-C2 +V 0 1000nF V=10 Irms=0 Rser=4 Lser=0
+C2 +V 0 1250nF V=10 Irms=0 Rser=4 Lser=0
 C5 +V 0 500nF
-C3 0 -V 1000nF V=10 Irms=0 Rser=4 Lser=0
+C3 0 -V 1250nF V=10 Irms=0 Rser=4 Lser=0
 C4 0 -V 500nF
 XU7 0 N005 +V -V V2nd level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
 XU8 0 N003 +V -V V3rd level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
