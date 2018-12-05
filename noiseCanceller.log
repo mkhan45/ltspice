@@ -1,0 +1,4 @@
+Circuit: * E:\ltspice\noiseCanceller.asc
+
+Fatal Error: V4: Could not open wavefile: whitenoise.wav
+
