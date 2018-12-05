@@ -1,4 +1,53 @@
 Circuit: * E:\ltspice\noiseCanceller.asc
 
-Fatal Error: V4: Could not open wavefile: whitenoise.wav
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+vernier = 0.5
+vernier = 0.25
+Gmin = 0.00040994
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+Gmin = 0.000385357
+vernier = 0.015625
+vernier = 0.0078125
+vernier = 0.00390625
+vernier = 0.00195313
+Gmin = 0.000387233
+vernier = 0.000976563
+vernier = 0.000488281
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 93.9394%
+Source stepping succeeded in finding the operating point.
+
+
+Date: Tue Dec 04 21:20:45 2018
+Total elapsed time: 133.011 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 8163262
+traniter = 8161443
+tranpoints = 4080007
+accept = 3398623
+rejected = 681384
+matrix size = 75
+fillins = 811
+solver = Normal
+Thread vector: 5.8/4.5[2] 2.1/1.9[2] 1.4/2.0[1] 0.7/2.5[1]  2592/500
+Matrix Compiler1: 106.58 KB object code size  16.1/8.0/[3.4]
+Matrix Compiler2: 19.75 KB object code size  2.9/2.7/[0.9]
 
